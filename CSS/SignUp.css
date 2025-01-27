@@ -1,0 +1,839 @@
+body{
+    background-color: #B9D7EA;
+}
+.container{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insideContainer{
+    width: 80vw;
+    height: 85vh;
+    background-color: #0A2153;
+    box-shadow: 0.25rem 0.438rem 0.5rem 0.125rem #0A2153;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.firstSection,.secondSection{
+    width: 40vw;
+}
+.signupPage{
+    position: absolute;
+    margin-top: 1.125rem;
+    width: 13.875rem;
+    height: 3.5rem;
+    left:35.875rem;
+    border-radius: 3.125rem 0% 0% 3.125rem;
+    border:none;
+    background-color: #889CC8;
+    color: white;
+    font-size: 1.925rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form{
+    display: flex;
+    height: 35.75rem; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.stname{
+    width: 12.025rem;
+    margin-left: 3.5rem;
+}
+input[type="text"]{
+    margin-top: 5rem;
+    width: 12.025rem;
+    height: 3.125rem;
+    border-radius: 0.625rem;
+    border: none;
+}
+#name, #btnfrom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+input[type="email"],input[type="password"]{
+    margin-top: 1.25rem;
+    width: 25.975rem;
+    height: 3.125rem;
+    border-radius: 0.625rem;
+    border: none;
+}
+#email-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#signbtn{
+    margin-top: 1.125rem; 
+    background-color: #889CC8;
+    width: 11.375rem;
+    height: 3.625rem;
+    border:none;
+    border-radius: 2.25rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input{
+    padding-left: 1.25rem;
+    font-size: 1.375rem;
+    color: #0A2153;
+}
+.fas{
+    position: absolute;
+    font-size: 1.75rem;
+    color:#8F99B0;
+}
+#togglePassword{
+    top: 22.08rem;
+    left: 39.25rem;
+}
+#toggleConPassword{
+    top: 28.15rem;
+    left: 39.25rem;
+}
+.secondSection{
+    background-color: #889CC8;
+    z-index: 20;
+    box-shadow: -1rem 0.8125rem 0.25rem 0rem rgba(0,0,0,25%);
+    border-radius: 0rem 5rem 5rem 9.0625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .errorMsgFN,.errorMsgLN,.errorMsgE,.errorMsgP,.errorMsgCP{
+    visibility: hidden;
+    height: 1rem;
+    color: red;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    background-color: #0A2153;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+.errorMsgFN,.errorMsgLN,.errorMsgE{
+    width: 17.125rem;
+}
+.errorMsgP,.errorMsgCP {
+    width: 20.125rem;
+}
+ 
+@media(min-width:25rem) and (max-width:47.9rem){
+    .container{
+        margin-left: 5rem;
+        height: 97vh;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .insideContainer{
+        width: 65vw;
+        height: 97vh;
+        background-color: #0A2153;
+        box-shadow: 0.25rem 0.438rem 0.5rem 0.125rem #0A2153;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .firstSection{
+        width: 60vw;
+        height: 100vh;
+    }
+    .secondSection{
+        width: 65vw;
+        height: 45vh;
+        background-color: #889CC8;
+        z-index: 20;
+        box-shadow: -1rem 0.8125rem 0.25rem 0rem rgba(0,0,0,25%);
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .signupPage{
+        position: absolute;
+        margin-top: 1.225rem;
+        width: 13.875rem;
+        height: 3rem;
+        left:17.875rem;
+        border-radius: 3.125rem 5rem 0% 3.125rem;
+        border:none;
+        background-color: #889CC8;
+        color: white;
+        font-size: 1.825rem;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    img{
+        width: 15rem;
+        height: 15rem;
+    }
+    .form{
+        display: flex;
+        height: 23.75rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* display: none; */
+
+    }
+    .stname{
+        width: 10.025rem;
+        margin-left: 2.2rem;
+    }
+    input[type="text"]{
+        margin-top: 7.8rem;
+        width: 10.125rem;
+        height: 2.525rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #name, #btnfrom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.85rem;
+    }
+    #btnfrom{
+        margin-top: -0.2rem;
+        
+    }
+    input[type="email"],input[type="password"]{
+        margin-left: 2.5rem;
+        margin-top: 0.25rem;
+        width: 21.675rem;
+        height: 2.525rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #email-password{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #signbtn{
+        background-color: #889CC8;
+        width: 11.375rem;
+        height: 3.625rem;
+        border:none;
+        border-radius: 2.25rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input{
+        padding-left: 1.25rem;
+        font-size: 1.375rem;
+        color: #0A2153;
+    }
+    .fas{
+        position: absolute;
+        font-size: 1.2rem;
+        color:#8F99B0;
+    }
+    #togglePassword{
+        top: 14.9375rem;
+        left: 28.25rem;
+    }
+    #toggleConPassword{
+        top: 19.552rem;
+        left: 28.25rem;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE,.errorMsgP,.errorMsgCP{
+        visibility: hidden;
+        height: 1rem;
+        color: red;
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        background-color: #0A2153;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+    .errorMsgFN,.errorMsgLN{
+        width: 10.125rem;
+    }
+    .errorMsgP,.errorMsgCP,.errorMsgE {
+        margin-left: 2.5rem;
+        width: 22.125rem;
+    }
+}
+@media (min-width:48rem) and (max-width:51rem) {
+    .container{
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .insideContainer{
+        width: 96vw;
+        height: 80vh;
+        background-color: #0A2153;
+        box-shadow: 0.25rem 0.438rem 0.5rem 0.125rem #0A2153;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .firstSection,.secondSection{
+        width: 48vw;
+    }
+    .signupPage{
+        position: absolute;
+        margin-top: 1.125rem;
+        width: 9.875rem;
+        height: 3rem;
+        left:15.875rem;
+        border-radius: 3.125rem 0% 0% 3.125rem;
+        border:none;
+        background-color: #889CC8;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    img{
+        width: 27rem;
+        height: 27rem;
+    }
+    .form{
+        display: flex;
+        height: 33.75rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .stname{
+        width: 6.025rem;
+        margin-left: 7.5rem;
+    }
+    input[type="text"]{
+        margin-top: 1rem;
+        width: 8.125rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #name, #btnfrom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4.85rem;
+    }
+    #btnfrom{
+        margin-top: -0.125rem;
+        
+    }
+    input[type="email"],input[type="password"]{
+        margin-top: 0.25rem;
+        width: 18.675rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #email-password{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #signbtn{
+        background-color: #889CC8;
+        width: 9.375rem;
+        height: 2.925rem;
+        border:none;
+        border-radius: 2.25rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input{
+        padding-left: 1.25rem;
+        font-size: 0.975rem;
+        color: #0A2153;
+    }
+    .fas{
+        position: absolute;
+        font-size: 1.15rem;
+        color:#8F99B0;
+    }
+    #togglePassword{
+        top: 20.9375rem;
+        left: 20.25rem;
+    }
+    #toggleConPassword{
+        top: 25.4375rem;
+        left: 20.25rem;
+    }
+    .secondSection{
+        background-color: #889CC8;
+        z-index: 20;
+        box-shadow: -1rem 0.8125rem 0.25rem 0rem rgba(0,0,0,25%);
+        border-radius: 0rem 5rem 5rem 5.0625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE,.errorMsgP,.errorMsgCP{
+        visibility: hidden;
+        height: 1rem;
+        color: red;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        background-color: #0A2153;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE{
+        width: 17.125rem;
+    }
+    .errorMsgP,.errorMsgCP {
+        width: 20.125rem;
+    }
+} 
+@media (min-width:51.0625rem) and (max-width:59.875rem) {
+    .container{
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .insideContainer{
+        width: 96vw;
+        height: 80vh;
+        background-color: #0A2153;
+        box-shadow: 0.25rem 0.438rem 0.5rem 0.125rem #0A2153;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .firstSection,.secondSection{
+        width: 48vw;
+    }
+    .signupPage{
+        position: absolute;
+        margin-top: 1.125rem;
+        width: 9.875rem;
+        height: 3rem;
+        left:18.875rem;
+        border-radius: 3.125rem 0% 0% 3.125rem;
+        border:none;
+        background-color: #889CC8;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    img{
+        width: 27rem;
+        height: 27rem;
+    }
+    .form{
+        display: flex;
+        height: 33.75rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .stname{
+        width: 6.025rem;
+        margin-left: 7.5rem;
+    }
+    input[type="text"]{
+        margin-top: 1rem;
+        width: 8.125rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #name, #btnfrom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4.85rem;
+    }
+    #btnfrom{
+        margin-top: -0.125rem;
+        
+    }
+    input[type="email"],input[type="password"]{
+        margin-top: 0.25rem;
+        width: 18.675rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #email-password{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #signbtn{
+        background-color: #889CC8;
+        width: 9.375rem;
+        height: 2.925rem;
+        border:none;
+        border-radius: 2.25rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input{
+        padding-left: 1.25rem;
+        font-size: 0.975rem;
+        color: #0A2153;
+    }
+    .fas{
+        position: absolute;
+        font-size: 1.15rem;
+        color:#8F99B0;
+    }
+    #togglePassword{
+        top: 20.9375rem;
+        left: 22.25rem;
+    }
+    #toggleConPassword{
+        top: 26.075rem;
+        left: 22.25rem;
+    }
+    .secondSection{
+        background-color: #889CC8;
+        z-index: 20;
+        box-shadow: -1rem 0.8125rem 0.25rem 0rem rgba(0,0,0,25%);
+        border-radius: 0rem 5rem 5rem 5.0625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE,.errorMsgP,.errorMsgCP{
+        visibility: hidden;
+        height: 1rem;
+        color: red;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        background-color: #0A2153;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE{
+        width: 17.125rem;
+    }
+    .errorMsgP,.errorMsgCP {
+        width: 20.125rem;
+    }
+}
+@media (min-width:59.876rem) and (max-width:69.75rem) {
+    .container{
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .insideContainer{
+        width: 96vw;
+        height: 80vh;
+        background-color: #0A2153;
+        box-shadow: 0.25rem 0.438rem 0.5rem 0.125rem #0A2153;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .firstSection,.secondSection{
+        width: 48vw;
+    }
+    .signupPage{
+        position: absolute;
+        margin-top: 1.125rem;
+        width: 9.875rem;
+        height: 3rem;
+        left:25.875rem;
+        border-radius: 3.125rem 0% 0% 3.125rem;
+        border:none;
+        background-color: #889CC8;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    img{
+        width: 27rem;
+        height: 27rem;
+    }
+    .form{
+        display: flex;
+        height: 33.75rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .stname{
+        width: 11.025rem;
+        margin-left: 5.5rem;
+    }
+    input[type="text"]{
+        margin-top: 1rem;
+        width: 10.125rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #name, #btnfrom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.85rem;
+    }
+    #btnfrom{
+        margin-top: -0.125rem;
+        
+    }
+    input[type="email"],input[type="password"]{
+        margin-top: 0.25rem;
+        width: 22.675rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #email-password{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #signbtn{
+        background-color: #889CC8;
+        width: 9.375rem;
+        height: 2.925rem;
+        border:none;
+        border-radius: 2.25rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input{
+        padding-left: 1.25rem;
+        font-size: 0.975rem;
+        color: #0A2153;
+    }
+    .fas{
+        position: absolute;
+        font-size: 1.15rem;
+        color:#8F99B0;
+    }
+    #togglePassword{
+        top: 20.575rem;
+        left: 27.25rem;
+    }
+    #toggleConPassword{
+        top: 25.375rem;
+        left: 27.25rem;
+    }
+    .secondSection{
+        background-color: #889CC8;
+        z-index: 20;
+        box-shadow: -1rem 0.8125rem 0.25rem 0rem rgba(0,0,0,25%);
+        border-radius: 0rem 5rem 5rem 5.0625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE,.errorMsgP,.errorMsgCP{
+        visibility: hidden;
+        height: 1rem;
+        color: red;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        background-color: #0A2153;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE{
+        width: 17.125rem;
+    }
+    .errorMsgP,.errorMsgCP {
+        width: 20.125rem;
+    }
+}
+@media (min-width:69.76rem) and (max-width:79.75rem) {
+    .container{
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .insideContainer{
+        width: 96vw;
+        height: 80vh;
+        background-color: #0A2153;
+        box-shadow: 0.25rem 0.438rem 0.5rem 0.125rem #0A2153;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .firstSection,.secondSection{
+        width: 48vw;
+    }
+    .signupPage{
+        position: absolute;
+        margin-top: 1.125rem;
+        width: 9.875rem;
+        height: 3rem;
+        left:18.875rem;
+        border-radius: 3.125rem 0% 0% 3.125rem;
+        border:none;
+        background-color: #889CC8;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    img{
+        width: 27rem;
+        height: 27rem;
+    }
+    .form{
+        display: flex;
+        height: 33.75rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .stname{
+        width: 6.025rem;
+        margin-left: 7.5rem;
+    }
+    input[type="text"]{
+        margin-top: 1rem;
+        width: 8.125rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #name, #btnfrom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4.85rem;
+    }
+    #btnfrom{
+        margin-top: -0.125rem;
+        
+    }
+    input[type="email"],input[type="password"]{
+        margin-top: 0.25rem;
+        width: 18.675rem;
+        height: 3.125rem;
+        border-radius: 0.625rem;
+        border: none;
+    }
+    #email-password{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #signbtn{
+        background-color: #889CC8;
+        width: 9.375rem;
+        height: 2.925rem;
+        border:none;
+        border-radius: 2.25rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input{
+        padding-left: 1.25rem;
+        font-size: 0.975rem;
+        color: #0A2153;
+    }
+    .fas{
+        position: absolute;
+        font-size: 1.15rem;
+        color:#8F99B0;
+    }
+    #togglePassword{
+        top: 20.9375rem;
+        left: 22.25rem;
+    }
+    #toggleConPassword{
+        top: 26.075rem;
+        left: 22.25rem;
+    }
+    .secondSection{
+        background-color: #889CC8;
+        z-index: 20;
+        box-shadow: -1rem 0.8125rem 0.25rem 0rem rgba(0,0,0,25%);
+        border-radius: 0rem 5rem 5rem 5.0625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE,.errorMsgP,.errorMsgCP{
+        visibility: hidden;
+        height: 1rem;
+        color: red;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        background-color: #0A2153;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .errorMsgFN,.errorMsgLN,.errorMsgE{
+        width: 17.125rem;
+    }
+    .errorMsgP,.errorMsgCP {
+        width: 20.125rem;
+    }
+}
