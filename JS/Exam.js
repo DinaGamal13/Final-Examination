@@ -61,6 +61,7 @@ fetch('../que.json')
 //********************************************************* */
 
 //display questions function
+
 function displayQuestion(index) {
   const questionContainer = document.querySelector('.firstQuestionContainer p');
   const choicesContainer = document.querySelector('.firstQuestionAnswer');
