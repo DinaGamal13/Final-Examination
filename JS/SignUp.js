@@ -1,3 +1,4 @@
+//check validation of sign up form
 function validInput(firstName, lastName, email, password, confirmPassword, errorMsgFirstName,
     errorMsgLastName, errorMsgEmail, errorMsgPassword, errorMsgConfirmPassword) {
 
@@ -99,6 +100,7 @@ var errorMsgConfirmPassword = document.querySelector(".errorMsgCP");
 var togglePassword = document.querySelector("#togglePassword");
 var toggleConfirmPassword = document.querySelector("#toggleConPassword");
 
+
 signup.addEventListener("click", function (event) {
     event.preventDefault();
     if (validInput(
@@ -106,15 +108,17 @@ signup.addEventListener("click", function (event) {
         errorMsgFirstName,errorMsgLastName,errorMsgEmail,errorMsgPassword,errorMsgConfirmPassword
       )
     ) {
+        //get data of users from local storage
         let users = JSON.parse(localStorage.getItem("users")) || [];
         
         const existingUser = users.find(user => user.email === email.value.trim());
         
+        //check if user want to sign in if his email is already exist 
         if (existingUser) {
             errorMsgEmail.innerHTML="This email is already exist"
             errorMsgEmail.style.visibility = "visible";
         }else{
-
+            //create new user and store it in local storage
             const newUser = {
                 firstName: firstName.value.trim(),
                 lastName: lastName.value.trim(),
@@ -126,14 +130,14 @@ signup.addEventListener("click", function (event) {
     
             localStorage.setItem("users", JSON.stringify(users));
     
-            location.href = "../Html/StartExam.html";
+            location.href = "../HTML/StartExam.html";
         }
 
     }
 });
 
 
-
+//Password Icon Change
 let isPasswordVisible = false;
 let isConfirmPasswordVisible = false;
 
@@ -179,7 +183,7 @@ toggleConfirmPassword.addEventListener("click", function () {
 
 
 
-
+//store sign up data in local storage
 inputs.forEach(input => {
     input.addEventListener("input", function () {
         localStorage.setItem(input.id, input.value);
@@ -191,8 +195,3 @@ window.addEventListener("load", function () {
         input.value = localStorage.getItem(input.id) || "";
     });
 });
-
-
-
-
-

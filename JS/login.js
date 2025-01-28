@@ -5,6 +5,7 @@ const btnlogin = document.querySelector(".btnlogin");
 const errorMessage1 = document.getElementsByClassName("error")[0];
 const errorMessage2 = document.getElementsByClassName("error")[1];
 
+//Password Icon Change 
 imgIcone.addEventListener("click", function () {
     if (passwordInput.type === "password") {
         passwordInput.type = "text"; 
@@ -23,6 +24,7 @@ passwordInput.addEventListener("keydown", function () {
     errorMessage2.style.visibility = "hidden";
 });
 
+//chec validation of login form and store data in local storge
 btnlogin.addEventListener("click", function () {
     let isValid = true;
     let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -72,13 +74,13 @@ btnlogin.addEventListener("click", function () {
 
         localStorage.setItem("currentUser", JSON.stringify(storedUser));
 
-        location.href = "../Html/StartExam.html"; 
+        location.href = "../HTML/StartExam.html"; 
     }
 });
 
 
 const Register=document.querySelector(".Register")
 Register.addEventListener("click",function(){
-    window.location.href ="../Html/SignUp.html" 
+    window.location.href ="../HTML/SignUp.html" 
 })
 

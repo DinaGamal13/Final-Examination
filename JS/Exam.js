@@ -1,3 +1,5 @@
+//timer function
+
 // const totalTime = 5 * 60; 
 const totalTime = 1 * 60; 
 let timeLeft = totalTime;
@@ -26,8 +28,9 @@ const timerInterval = setInterval(() => {
     }
 }, 1000); 
 
+//**************************************************************************************/
 
-//************************************************************************************ */
+//fetch questions data 
 
 let currentQuestionIndex = 0;
 let questions = [];
@@ -54,8 +57,10 @@ fetch('../que.json')
     }
   })
   .catch(error => console.error('Error loading JSON:', error));
+
 //********************************************************* */
 
+//display questions function
 function displayQuestion(index) {
   const questionContainer = document.querySelector('.firstQuestionContainer p');
   const choicesContainer = document.querySelector('.firstQuestionAnswer');
@@ -101,6 +106,9 @@ function displayQuestion(index) {
 }
 
 //********************************************************* */
+
+//update functions of next, previous, nav of questions and num of questions
+
 function updateQuestionNumber(index) {
   const numOfQuestion = document.querySelector('.numOfQuestion span');
   numOfQuestion.textContent = index + 1; 
@@ -109,13 +117,13 @@ function updateQuestionNumber(index) {
 function updateButtonsState() {
   const nextButton = document.querySelector('.nextButton');
   const prevButton = document.querySelector('.previousButton');
-
+  
   if (currentQuestionIndex === questions.length - 1) {
     nextButton.disabled = true;
   } else {
     nextButton.disabled = false;
   }
-
+  
   if (currentQuestionIndex === 0) {
     prevButton.disabled = true;
   } else {
@@ -125,7 +133,7 @@ function updateButtonsState() {
 
 function setupQuestionNav() {
   const navQuestions = document.querySelectorAll('.navQuestions .questionNavItem');
-
+  
   navQuestions.forEach((questionItem, index) => {
     questionItem.addEventListener('click', () => {
       currentQuestionIndex = index; 
@@ -142,10 +150,10 @@ document.querySelector('.nextButton').addEventListener('click', () => {
     displayQuestion(currentQuestionIndex);
     updateQuestionNumber(currentQuestionIndex);
     updateButtonsState();
-
+    
     document.querySelector('.previousButton').style.opacity = 1;
     document.querySelector('.previousButton').disabled = false;
-
+    
     if (currentQuestionIndex === questions.length - 1) {
       document.querySelector('.nextButton').disabled = true;
       document.querySelector('.nextButton').style.opacity = 0.7;
@@ -161,7 +169,7 @@ document.querySelector('.previousButton').addEventListener('click', () => {
     displayQuestion(currentQuestionIndex);
     updateQuestionNumber(currentQuestionIndex);
     updateButtonsState();
-
+    
     if (currentQuestionIndex === 0) {
       document.querySelector('.previousButton').style.opacity = 0.7;
       document.querySelector('.previousButton').disabled = true;
@@ -169,13 +177,17 @@ document.querySelector('.previousButton').addEventListener('click', () => {
       document.querySelector('.previousButton').style.opacity = 1;
       document.querySelector('.previousButton').disabled = false;
     }
-
+    
     if (currentQuestionIndex < questions.length - 1) {
       document.querySelector('.nextButton').disabled = false;
       document.querySelector('.nextButton').style.opacity = 1;
     }
   }
 });
+
+//********************************************************* */
+
+//show and hide flag
 
 const flagIcons = document.querySelectorAll('.questionsContainer .fa-flag');
 flagIcons.forEach((flag) => {
@@ -204,9 +216,9 @@ document.querySelector(".submit").addEventListener("click",function(){
   const finalTotalScore = Math.round(totalScore * 100);
     localStorage.setItem("totalScore",finalTotalScore)
     if(finalTotalScore>=50){
-      window.location.href="../Html/result.html"
+      window.location.href="../HTML/result.html"
     }else{
-      window.location.href="../Html/failer.html"
+      window.location.href="../HTML/failer.html"
     }
     
 })
