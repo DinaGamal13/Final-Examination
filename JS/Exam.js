@@ -1,30 +1,30 @@
 // const totalTime = 5 * 60; 
-// const totalTime = 5 * 10; 
-// let timeLeft = totalTime;
+const totalTime = 1 * 60; 
+let timeLeft = totalTime;
 
-// const timerBar = document.getElementById("timer-bar");
-// const movingCircle = document.getElementById("moving-circle");
-// const timerText = document.querySelector(".timeLeft");
+const timerBar = document.getElementById("timer-bar");
+const movingCircle = document.getElementById("moving-circle");
+const timerText = document.querySelector(".timeLeft");
 
 
-// const timerInterval = setInterval(() => {
-//     timeLeft--;
+const timerInterval = setInterval(() => {
+    timeLeft--;
 
-//     const progressPercentage = ((totalTime - timeLeft) / totalTime) * 100;
+    const progressPercentage = ((totalTime - timeLeft) / totalTime) * 100;
 
-//     timerBar.style.width = `${progressPercentage}%`;
+    timerBar.style.width = `${progressPercentage}%`;
 
-//     movingCircle.style.left = `${progressPercentage}%`;
+    movingCircle.style.left = `${progressPercentage}%`;
 
-//     const minutes = Math.floor(timeLeft / 60);
-//     const seconds = timeLeft % 60;
-//     timerText.textContent = `Time left ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerText.textContent = `Time left ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
-//     if (timeLeft <= 0) {
-//         clearInterval(timerInterval);
-//         location.href="../Html/timeout.html";
-//     }
-// }, 1000); 
+    if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        location.href="../Html/timeout.html";
+    }
+}, 1000); 
 
 
 //************************************************************************************ */
